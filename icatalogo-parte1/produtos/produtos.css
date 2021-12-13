@@ -1,0 +1,134 @@
+.produtos-container header {
+  padding: 10px 0px;
+}
+
+.produtos-container header button {
+  margin-right: 10px;
+}
+
+.produtos-container main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  place-items: center;
+
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.card-produto {
+  background-color: var(--backgroundPrimary);
+  width: 100%;
+  min-width: 300px;
+  max-width: 350px;
+  position: relative;
+
+  border-radius: 6px;
+  box-shadow: 0px 0px 2px 2px var(--boxShadow);
+
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  box-shadow: 0px 0px 20px 10px var(--boxShadow);
+}
+
+.card-produto figure {
+  margin: 0;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid var(--backgroundSecondary);
+}
+
+.card-produto figure img {
+  width: 100%;
+  max-height: 100%;
+
+  border-radius: 6px 6px 0px 0px;
+
+}
+
+.card-produto section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  color: var(--textPrimary);
+}
+
+.card-produto section .preco {
+  font-size: 26px;
+}
+
+.card-produto section .preco > em {
+  margin-left: 5px;
+  font-size: 14px;
+  color: green;
+  text-decoration: line-through;
+}
+
+.card-produto section .parcelamento {
+  font-size: 14px;
+}
+
+.card-produto section .parcelamento em {
+  color: var(--accentSecondary);
+  font-style: normal;
+}
+
+.card-produto section .categoria {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--textSecundary);
+}
+
+.card-produto section .categoria em {
+  padding: 4px;
+  background-color: var(--backgroundSecondary);
+  border-radius: 4px;
+  margin-right: 4px;
+}
+.card-produto section .descricao {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--textSecundary);
+}
+
+.card-produto section > img {
+  width: 35px;
+  align-self: flex-end;
+  z-index: 1;
+  margin-top: -20px;
+  padding: 4px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card-produto section > img:hover {
+  border: solid 2px black;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+.acoes{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 5px 10px;
+  background-color: var(--overlay);
+  border-radius: 6px;
+}
+
+.acoes img{
+  width: 20px;
+}
+
+.acoes img:hover{
+  transition: 0.2s;
+  transform: rotate(360deg) scale(1.1);
+}
